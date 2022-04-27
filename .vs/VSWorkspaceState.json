@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DataAccsessLayer",
+    "\\DataAccsessLayer\\Concrete",
+    "\\DataAccsessLayer\\Concrete\\EntityFramework"
+  ],
+  "SelectedNode": "\\DataAccsessLayer\\Concrete\\EntityFramework\\EfWrongAnswerDal.cs",
+  "PreviewInSolutionExplorer": false
+}
