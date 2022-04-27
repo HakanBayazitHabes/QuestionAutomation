@@ -51,13 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\IQuestionDal.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Abstract\IUserRoleDal.cs" />
+    <Compile Include="Abstract\IWrongAnswerDal.cs" />
     <Compile Include="Concrete\EntityFramework\Context.cs" />
+    <Compile Include="Concrete\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concrete\EntityFramework\EfQuestionDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserRoleDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfWrongAnswerDal.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
