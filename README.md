@@ -27,30 +27,30 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 
 ### Admin Panel
  
-0.  [Login Screen](https://i.hizliresim.com/91tpqh9.jpg)
-1.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
-2.  [Not Allowed Questions](https://i.hizliresim.com/9rkw7hn.jpg)
-3.  [Details of Allowed Questions](https://i.hizliresim.com/sft4cnh.jpg)
+1.  [Login Screen](https://i.hizliresim.com/91tpqh9.jpg)
+2.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
+3.  [Not Allowed Questions](https://i.hizliresim.com/9rkw7hn.jpg)
+4.  [Details of Allowed Questions](https://i.hizliresim.com/sft4cnh.jpg)
 
 ### Teacher Panel
 
-0.  [Login Screen](https://i.hizliresim.com/hths53w.jpg)
-1.  [Sign Up Screen](https://i.hizliresim.com/jpu0w1m.jpg)
-2.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
-3.  [Main Menu](https://i.hizliresim.com/cdd4ijh.jpg)
-4.  [Add Question Screen](https://i.hizliresim.com/rfqtyvh.jpg)
-5.  [Appearance of Added Question](https://i.hizliresim.com/a4ey3im.jpg)
-6.  [Adding Wrong Answer Screen](https://i.hizliresim.com/rkk80hd.jpg)
-7.  [Update Questions Screen](https://i.hizliresim.com/4v0jwl5.jpg)
+1.  [Login Screen](https://i.hizliresim.com/hths53w.jpg)
+2.  [Sign Up Screen](https://i.hizliresim.com/jpu0w1m.jpg)
+3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
+4.  [Main Menu](https://i.hizliresim.com/cdd4ijh.jpg)
+5.  [Add Question Screen](https://i.hizliresim.com/rfqtyvh.jpg)
+6.  [Appearance of Added Question](https://i.hizliresim.com/a4ey3im.jpg)
+7.  [Adding Wrong Answer Screen](https://i.hizliresim.com/rkk80hd.jpg)
+8.  [Update Questions Screen](https://i.hizliresim.com/4v0jwl5.jpg)
 
 ### Student Panel
 
-0.  [Login Screen](https://i.hizliresim.com/s0xhw0g.jpg)
-1.  [Sign Up Screen](https://i.hizliresim.com/mpy5bea.jpg)
-2.  [Forgot Password Screen](https://i.hizliresim.com/e6pdwye.jpg)
-3.  [Exam Entry Screen](https://i.hizliresim.com/7bujgg2.jpg)
-4.  [Exam Screen](https://i.hizliresim.com/bltzgso.jpg)
-5.  [Reporting Screen](https://i.hizliresim.com/jsgy2mb.jpg)
+1.  [Login Screen](https://i.hizliresim.com/s0xhw0g.jpg)
+2.  [Sign Up Screen](https://i.hizliresim.com/mpy5bea.jpg)
+3.  [Forgot Password Screen](https://i.hizliresim.com/e6pdwye.jpg)
+4.  [Exam Entry Screen](https://i.hizliresim.com/7bujgg2.jpg)
+5.  [Exam Screen](https://i.hizliresim.com/bltzgso.jpg)
+6.  [Reporting Screen](https://i.hizliresim.com/jsgy2mb.jpg)
 
 
 
@@ -85,30 +85,30 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
  
  ### Admin Paneli
  
-0.  [Giriş Ekranı](https://i.hizliresim.com/91tpqh9.jpg)
-1.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
-2.  [İzin Verilmeyen Sorular](https://i.hizliresim.com/9rkw7hn.jpg)
-3.  [İzin Verilen Soruların Detayları](https://i.hizliresim.com/sft4cnh.jpg)
+1.  [Giriş Ekranı](https://i.hizliresim.com/91tpqh9.jpg)
+2.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
+3.  [İzin Verilmeyen Sorular](https://i.hizliresim.com/9rkw7hn.jpg)
+4.  [İzin Verilen Soruların Detayları](https://i.hizliresim.com/sft4cnh.jpg)
 
 ### Öğretmen Paneli
 
-0.  [Giriş Ekranı](https://i.hizliresim.com/hths53w.jpg)
-1.  [Kaydol Ekranı](https://i.hizliresim.com/jpu0w1m.jpg)
-2.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
-3.  [Ana Menu](https://i.hizliresim.com/cdd4ijh.jpg)
-4.  [Soru Ekleme Ekranı](https://i.hizliresim.com/rfqtyvh.jpg)
-5.  [Eklenen Sorunun Görünümü](https://i.hizliresim.com/a4ey3im.jpg)
-6.  [Yanlış Cevap Ekleme Ekranı](https://i.hizliresim.com/rkk80hd.jpg)
-7.  [Soruları Güncelleme Ekranı](https://i.hizliresim.com/4v0jwl5.jpg)
+1.  [Giriş Ekranı](https://i.hizliresim.com/hths53w.jpg)
+2.  [Kaydol Ekranı](https://i.hizliresim.com/jpu0w1m.jpg)
+3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
+4.  [Ana Menu](https://i.hizliresim.com/cdd4ijh.jpg)
+5.  [Soru Ekleme Ekranı](https://i.hizliresim.com/rfqtyvh.jpg)
+6.  [Eklenen Sorunun Görünümü](https://i.hizliresim.com/a4ey3im.jpg)
+7.  [Yanlış Cevap Ekleme Ekranı](https://i.hizliresim.com/rkk80hd.jpg)
+8.  [Soruları Güncelleme Ekranı](https://i.hizliresim.com/4v0jwl5.jpg)
 
 ### Öğrenci Paneli
 
-0.  [Giriş Ekranı](https://i.hizliresim.com/s0xhw0g.jpg)
-1.  [Kaydol Ekranı](https://i.hizliresim.com/mpy5bea.jpg)
-2.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/e6pdwye.jpg)
-3.  [Sınava Giriş Ekranı](https://i.hizliresim.com/7bujgg2.jpg)
-4.  [Sınav Ekranı](https://i.hizliresim.com/bltzgso.jpg)
-5.  [Raporlama Ekranı](https://i.hizliresim.com/jsgy2mb.jpg)
+1.  [Giriş Ekranı](https://i.hizliresim.com/s0xhw0g.jpg)
+2.  [Kaydol Ekranı](https://i.hizliresim.com/mpy5bea.jpg)
+3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/e6pdwye.jpg)
+4.  [Sınava Giriş Ekranı](https://i.hizliresim.com/7bujgg2.jpg)
+5.  [Sınav Ekranı](https://i.hizliresim.com/bltzgso.jpg)
+6.  [Raporlama Ekranı](https://i.hizliresim.com/jsgy2mb.jpg)
 
 
 
