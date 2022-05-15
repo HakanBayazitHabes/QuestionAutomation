@@ -20,8 +20,8 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 > + [Mssql](https://www.microsoft.com/tr-tr/sql-server/sql-server-downloads) or [Mysql](https://dev.mysql.com/downloads/installer/)
 
 ### Teammates
-1.[Enes Mehmet Yıldırım](https://github.com/EnesMehmet1) [Linkedin](https://www.linkedin.com/in/enes-mehmet-y%C4%B1ld%C4%B1r%C4%B1m-74b8701bb/)
-2.[Hakan Bayazıt Habeş](https://github.com/HakanBayazitHabes) [Linkedin](https://www.linkedin.com/in/hakan-bayaz%C4%B1t-habe%C5%9F-157844221/)
+1. [Enes Mehmet Yıldırım](https://github.com/EnesMehmet1) [Linkedin](https://www.linkedin.com/in/enes-mehmet-y%C4%B1ld%C4%B1r%C4%B1m-74b8701bb/)
+2. [Hakan Bayazıt Habeş](https://github.com/HakanBayazitHabes) [Linkedin](https://www.linkedin.com/in/hakan-bayaz%C4%B1t-habe%C5%9F-157844221/)
 
 ### Sections from our application
 
@@ -55,6 +55,8 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 
 
 
+
+
 ## TURKCE
 ### Bilgilendirme
 Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğretmenlerimiz ve özellikle de öğrencilerimzin kolayca etkileşim kurduğu ve  admin kontrolünün olduğu bir soru sistemi üzerine kuruludur . Projemiz ***teknik*** açıdan bakacak olursan katmanlı mimari kullanarak kullanıcı dostu yapı oluşturmaya gayret gösterdik ve soyut sınıflara olabildiğince önem verdik ki ileride yapacağımız güncellemerin maliyet açısından minimalize etmeye çalıştık . 
@@ -76,8 +78,8 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 
 
 ### Ekip Arkadaşları
-1.[Enes Mehmet Yıldırım](https://github.com/EnesMehmet1) [Linkedin](https://www.linkedin.com/in/enes-mehmet-y%C4%B1ld%C4%B1r%C4%B1m-74b8701bb/)
-2.[Hakan Bayazıt Habeş](https://github.com/HakanBayazitHabes) [Linkedin](https://www.linkedin.com/in/hakan-bayaz%C4%B1t-habe%C5%9F-157844221/)
+1. [Enes Mehmet Yıldırım](https://github.com/EnesMehmet1) [Linkedin](https://www.linkedin.com/in/enes-mehmet-y%C4%B1ld%C4%B1r%C4%B1m-74b8701bb/)
+2. [Hakan Bayazıt Habeş](https://github.com/HakanBayazitHabes) [Linkedin](https://www.linkedin.com/in/hakan-bayaz%C4%B1t-habe%C5%9F-157844221/)
 
 ## Uygulamamızdan kesitler
  
