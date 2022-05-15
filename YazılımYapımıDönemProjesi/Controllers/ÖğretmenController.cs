@@ -18,7 +18,7 @@ namespace YazılımYapımıDönemProjesi.Controllers
         // GET: Öğretmen
         QuestionManager questionManager = new QuestionManager(new EfQuestionDal());
         WrongAnswerManager wrongAnswerManager = new WrongAnswerManager(new EfWrongAnswerDal());
-        Question_WrongAnswer qw = new Question_WrongAnswer();
+        Question_WrongAnswer question_WrongAnswer = new Question_WrongAnswer();
         public ActionResult Index(int p=1)
         {
             var sorularınSayfalanması = questionManager.GetAll().ToPagedList(p, 10);
@@ -53,9 +53,9 @@ namespace YazılımYapımıDönemProjesi.Controllers
         }
         public ActionResult EklenenSorununGorunumu(int id)
         {
-            qw.Question = questionManager.GetByLastID(id);
-            qw.WrongAnswer = wrongAnswerManager.GetAll();
-            return View(qw);
+            question_WrongAnswer.Question = questionManager.GetByLastID(id);
+            question_WrongAnswer.WrongAnswer = wrongAnswerManager.GetAll();
+            return View(question_WrongAnswer);
         }
         public ActionResult SorularıGetir(int id)
         {
