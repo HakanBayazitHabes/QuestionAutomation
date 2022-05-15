@@ -59,8 +59,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
         }
         public ActionResult SorularıGetir(int id)
         {
-            var soruicerigi = questionManager.GetByQuestionID(id);
-            return View("SorularıGetir", soruicerigi);
+            var soruIcerigi = questionManager.GetByQuestionID(id);
+            return View("SorularıGetir", soruIcerigi);
         }
         [ValidateInput(false)]
         public ActionResult EklenenSorulariGuncelle(Question question)
