@@ -12,7 +12,11 @@ namespace BusinessLayer.FluentValidation
     {
         public UserValidator()
         {
-             
+            RuleFor(x => x.Mail).NotEmpty().WithMessage("Mail Alanı Boş Geçemezsiniz");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Ad boş geçemezsiniz");
+            RuleFor(x => x.SurName).MinimumLength(3).WithMessage("Soyad boş geçemezsiniz");
+            RuleFor(x => x.Password).MaximumLength(20).WithMessage("Password boş geçilemez");
+
         }
     }
 }

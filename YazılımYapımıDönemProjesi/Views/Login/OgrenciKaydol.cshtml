@@ -1,0 +1,61 @@
+﻿@model EntityLayer.Concrete.User
+@{
+    Layout = null;
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>Öğrenci Giriş Ekranı</h2>
+                    @using (Html.BeginForm("OgrenciGirisYap", "Login", FormMethod.Post))
+                    {
+                        <form class="form-group">
+                            <input type="email" class="input-box" name="Mail" placeholder="Your Email" required>
+                            <input type="password" class="input-box" name="Password" placeholder="Password" required>
+                            <button type="submit" class="Submit-btn">Giriş Yap</button>
+
+                        </form>
+                    }
+                    <button type="button" class="btn" onclick="openRegister()">Hesap Oluştur</button>
+                    <a href="/Login/ResetOgrenciPassword/">Şifremi Unuttum</a>
+                </div>
+                <div class="card-back">
+                    <h2>Öğrenci Kaydolma Ekranı</h2>
+                    @using (Html.BeginForm("OgrenciKaydol", "Login", FormMethod.Post))
+                    {
+                        <form class="form-group">
+                            <input type="text" class="input-box" name="Name" placeholder="Your Name" required>
+                            <input type="text" class="input-box" name="SurName" placeholder="Your Surname" required>
+                            <input type="email" class="input-box" name="Mail" placeholder="Your email" required>
+                            <input type="password" class="input-box" name="Password" placeholder="Password" required>
+                            <button type="submit" class="Submit-btn">Kaydol</button>
+                            <input style="display:none;" type="text" name="UserRoleID" value="1" /><span></span>
+                        </form>
+                    }
+                    <button style="margin-top:-1px;" type="button" class="btn" onclick="openLogin()">Zaten bir hesabım var</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var card = document.getElementById("card");
+        function openRegister() {
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLogin() {
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Question
+@{
+    ViewBag.Title = "SoruEkle";
+    Layout = "~/Views/Shared/_ÖğretmenLayout.cshtml";
+}
+@section Scripts{
+    <script>
+        var editor = CKEDITOR.replace('txtContent', {
+            customConfig: '~/Scripts/ckeditor/ckeditor.js'
+        });
+    </script>
+}
+<br />
+<h2>Yeni Soru Ekle</h2>
+<br />
+<form class="form-group col-md-11  " method="post">
+    @Html.LabelFor(x => x.CourseName)
+    @Html.TextBoxFor(x => x.CourseName, new { @required = "required", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.UnitName)
+    @Html.TextBoxFor(x => x.UnitName, new { @required = "required", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.SubjectName)
+    @Html.TextBoxFor(x => x.SubjectName, new { @required = "required", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.QuestionText)
+    @Html.TextAreaFor(x => x.QuestionText, new { htmlAttributes = new { @required = "required", @class = "form-control" } , id = "txtContent" })
+    <br />    
+    @Html.LabelFor(x => x.CorrectAnswer)
+    @Html.TextBoxFor(x => x.CorrectAnswer, new { @required = "required", @class = "form-control" })
+    <br />    
+    <button onclick="validation();" class="btn btn-primary">Soru Ekle</button>
+</form>
+
+<script type="text/javascript">
+    demo();
+    function validation() {
+        swal("Succsess!", "Sorunuzu Başarıyla Eklediniz", "success", {
+            button: null,
+        });
+    }
+
+</script>

@@ -1,0 +1,30 @@
+﻿body {
+    background-color: #f2f7fd;
+}
+
+.space {
+    margin: 10px 200px;
+    background-color: #ffffff;
+    height: auto;
+    padding: 22px;
+    border-radius: 13px;
+    width: 1000px;
+    box-shadow: 0 0.125rem 0.2875rem 0 rgb(0 0 0 / 10%);
+}
+
+.space-all {
+    margin: 10px 200px;
+    background-color: #ffffff;
+    height: auto;
+    padding: 22px;
+    border-radius: 13px;
+    width: 1000px;
+    cursor: pointer;
+}
+
+#page-details {
+    margin-top: 50px;
+}
+.colorUp:hover {
+    color: white;
+}

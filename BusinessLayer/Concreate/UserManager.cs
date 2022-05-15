@@ -13,7 +13,7 @@ namespace BusinessLayer.Concreate
 {
     public class UserManager : IUserService
     {
-        IUserDal _userDal;
+        private IUserDal _userDal;
 
         public UserManager(IUserDal userDal)
         {
@@ -47,6 +47,11 @@ namespace BusinessLayer.Concreate
             }
         }
 
+        public User GetByMailPassword(User user)
+        {
+            return _userDal.Get(x => x.Mail == user.Mail && x.Password== user.Password);
+        }
+
         public List<User> GetAll()
         {
             return _userDal.GetAll();
@@ -56,5 +61,12 @@ namespace BusinessLayer.Concreate
         {
             _userDal.Update(user);
         }
+
+        public User GetByEmail(User user)
+        {
+            return _userDal.Get(x => x.Mail == user.Mail);
+        }
+
+        
     }
 }

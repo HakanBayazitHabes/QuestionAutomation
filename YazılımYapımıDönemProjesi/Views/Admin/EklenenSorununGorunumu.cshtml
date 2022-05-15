@@ -1,0 +1,49 @@
+﻿@model EntityLayer.Concrete.Question_WrongAnswer
+@{
+    ViewBag.Title = "EklenenSorununGorunumu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 class="space" style="margin:0;margin-top:0px!important;width:100%;">Eklenen Sorunun Görüntüsü</h2>
+<section id="page-details">
+
+    @foreach (var x in Model.Question)
+    {
+        <div class="space">
+            <h4><b>Ders Adı:</b> @x.CourseName  -  <b>Ünite Adı:</b> @x.UnitName </h4>
+        </div>
+
+        <div class="container space">
+
+            <div>
+                <br />
+                @Html.Raw(x.QuestionText)
+                <br />
+            </div>
+
+        </div>
+        <div class="space-all">
+            @x.CorrectAnswer
+        </div>
+
+        foreach (var y in Model.WrongAnswer)
+        {
+            if (y.QuestionID == x.ID)
+            {
+                <div class="space-all">
+                    @y.WrongAnswer_1
+                </div>
+                <div class="space-all">
+                    @y.WrongAnswer_2
+                </div>
+                <div class="space-all">
+                    @y.WrongAnswer_3
+                </div>
+            }
+        }
+    }
+</section>
+<br />
+<br />
+<br />

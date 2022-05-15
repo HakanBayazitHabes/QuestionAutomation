@@ -1,0 +1,147 @@
+﻿@using EntityLayer.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Question>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ÖğretmenLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <h1>Eklenen Soruların Detayları</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Sorular Tablosu</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 10%">
+                                Course Name
+                            </th>
+                            <th style="width: 10%">
+                                Unit Name
+                            </th>
+                            <th style="width: 37%">
+                                QuestionText
+                            </th>
+                            <th style="width: 9%">
+                                Correct Answer
+                            </th>
+                            <th style="width: 17%">
+                                Wrong Answer
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.ID
+                                </td>
+                                <td>
+                                    <a>
+                                        @item.CourseName
+                                    </a>
+                                    <br />
+                                    <small>
+                                        @(((DateTime)item.AddDate).ToString("dd-MMM-yyyy"))
+                                    </small>
+                                </td>
+                                <td>
+                                    <span>@item.UnitName</span>
+                                </td>
+                                <td>
+                                    <smal>@item.QuestionText.Substring(0, item.QuestionText.Length - (item.QuestionText.Length / 2 + item.QuestionText.Length / 3))...</smal>
+                                </td>
+                                <td>
+                                    <span>@item.CorrectAnswer</span>
+                                </td>
+                                <td class="project-actions">
+                                    <a class="btn btn-primary btn-sm mt-1" href="/Öğretmen/EklenenSorununGorunumu/@item.ID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        İçerik
+                                    </a>
+                                    <a class="btn btn-info btn-sm mt-1" href="/Öğretmen/SorularıGetir/@item.ID">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Düzenle
+                                    </a>
+                                    <a class="btn btn-warning btn-sm mt-1" href="/Öğretmen/YanlisCevapEkle/@item.ID">
+                                        Yanlış Cevap Ekle
+                                    </a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 10%">
+                                Course Name
+                            </th>
+                            <th style="width: 10%">
+                                Unit Name
+                            </th>
+                            <th style="width: 37%">
+                                QuestionText
+                            </th>
+                            <th style="width: 9%">
+                                Correct Answer
+                            </th>
+                            <th style="width: 17%">
+                                Wrong Answer
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </section>
+</body>
+</html>
+
+<a href="/Öğretmen/SoruEkle/" class="btn btn-primary">Yeni Soru Ekle</a>
+<span style="text-align:center; position:relative;">@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p })) </span>
+
+
+
+
+<br />
+<br />
+<br />

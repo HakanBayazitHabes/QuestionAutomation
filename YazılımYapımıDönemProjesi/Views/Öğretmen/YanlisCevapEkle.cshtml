@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Concrete.WrongAnswer
+@{
+    ViewBag.Title = "YanlisCevapEkle";
+    Layout = "~/Views/Shared/_ÖğretmenLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-10">
+            <br />
+            <h2>Yanlış Cevap Ekle</h2>
+            <br />
+            <div class="content-from">
+                <form class="form-group" method="post">
+                    @Html.TextBoxFor(x => x.QuestionID, new { style = "display:none;", @Value = ViewBag.deger })
+                    <label>Yanlış Cevap 1</label>
+                    @Html.TextBoxFor(x => x.WrongAnswer_1, new { @required = "required", @class = "form-control " })
+                    <br />
+                    <label>Yanlış Cevap 2</label>
+                    @Html.TextBoxFor(x => x.WrongAnswer_2, new { @required = "required", @class = "form-control" })
+                    <br />
+                    <label>Yanlış Cevap 3</label>
+                    @Html.TextBoxFor(x => x.WrongAnswer_3, new { @required = "required", @class = "form-control" })
+                    <br />
+
+                    <button onclick="validation();" class="btn btn-primary">Yanlış Cevapları Ekle</button>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    demo();
+    function validation() {
+        swal("Succsess!", "Yanlış Şıkları Başarıyla Eklediniz", "success", {
+            button: null,
+        });
+    }
+
+</script>

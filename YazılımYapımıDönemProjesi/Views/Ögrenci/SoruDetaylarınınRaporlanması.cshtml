@@ -1,0 +1,115 @@
+﻿@using EntityLayer.Concrete
+@model List<Question>
+@{
+    ViewBag.Title = "SoruDetaylarınınRaporlanması";
+    Layout = null;
+}
+
+<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soruları Raporlama  İşlemi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+</head>
+<body class="ml-5 mr-5 mt-lg-5">
+    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+        <thead>  
+            <tr>
+                <th>Ünite Adı</th>
+                <th>Konu Adı</th>
+                <th>Soru Sayısı</th>
+                <th>Dogru Sayısı</th>
+                <th>Yanlış Sayısı</th>
+                <th>Başarı Oranı</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var x in Model)
+            {
+                string unitName = x.UnitName;
+                string subjectName = x.SubjectName;
+                int soruSayısı = 0;
+                int dogruSayisi = 0;
+                int yanlisSayisi = 0;
+
+                foreach (var item in Model)
+                {
+                    if (x.IsMark == true && x.UnitName == item.UnitName && x.SubjectName == item.SubjectName && item.AdminAllow == "Allow")
+                    {
+                        soruSayısı++;
+                    }
+                    if (x.IsTrue == true && x.UnitName == item.UnitName && x.SubjectName == item.SubjectName && x.IsMark == true && item.AdminAllow == "Allow")
+                    {
+                        dogruSayisi++;
+                    }
+                    else if (x.IsTrue == false && x.UnitName == item.UnitName && x.SubjectName == item.SubjectName && x.IsMark == true && item.AdminAllow == "Allow")
+                    {
+                        yanlisSayisi++;
+                    }
+                }
+
+                int basariOrani;
+                if (soruSayısı == 0)
+                {
+                    basariOrani = 0;
+                }
+                else
+                {
+                    basariOrani = (dogruSayisi / soruSayısı) * 100;
+                }
+                if (x.IsMark == true && x.AdminAllow=="Allow")
+                {
+                    <tr>
+
+                        <td>@x.UnitName</td>
+                        <td>@x.SubjectName</td>
+                        <td>@soruSayısı</td>
+                        <td>@dogruSayisi</td>
+                        <td>@yanlisSayisi</td>
+                        <td>@basariOrani%</td>
+
+                    </tr>
+                }
+            }
+
+        </tbody>
+
+
+    </table>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                lengthChange: false,
+                buttons: ['copy', 'excel', 'csv', 'pdf', 'colvis']
+            });
+
+            table.buttons().container()
+                .appendTo('#example_wrapper .col-md-6:eq(0)');
+        });
+
+    </script>
+</body>
+</html>
+

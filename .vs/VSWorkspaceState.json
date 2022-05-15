@@ -3,8 +3,12 @@
     "",
     "\\DataAccsessLayer",
     "\\DataAccsessLayer\\Concrete",
-    "\\DataAccsessLayer\\Concrete\\EntityFramework"
+    "\\DataAccsessLayer\\Concrete\\EntityFramework",
+    "\\YazılımYapımıDönemProjesi",
+    "\\YazılımYapımıDönemProjesi\\Controllers",
+    "\\YazılımYapımıDönemProjesi\\Views",
+    "\\YazılımYapımıDönemProjesi\\Views\\Login"
   ],
-  "SelectedNode": "\\DataAccsessLayer\\Concrete\\EntityFramework\\EfWrongAnswerDal.cs",
+  "SelectedNode": "\\YazılımYapımıDönemProjesi\\CSS",
   "PreviewInSolutionExplorer": false
 }

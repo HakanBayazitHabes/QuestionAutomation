@@ -1,0 +1,148 @@
+﻿@using EntityLayer.Concrete
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Question>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <h1>Eklenen Soruların Detayları</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Sorular Tablosu</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 10%">
+                                Course Name
+                            </th>
+                            <th style="width: 10%">
+                                Unit Name
+                            </th>
+                            <th style="width: 10%">
+                                Correct Answer
+                            </th>
+                            <th style="width: 8%">
+                                Allow Question
+                            </th>
+                            <th style="width: 12%">
+                                Don't Allow the Question
+                            </th>
+                            <th style="width: 11%">
+                                Details
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @if (item.AdminAllow != "Allow" && item.AdminAllow != "Not Allow")
+                                {
+                                    <td>
+                                        @item.ID
+                                    </td>
+                                    <td>
+                                        <a>
+                                            @item.CourseName
+                                        </a>
+                                        <br />
+                                        <small>
+                                            @(((DateTime)item.AddDate).ToString("dd-MMM-yyyy"))
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span>@item.UnitName</span>
+                                    </td>
+
+                                    <td>
+                                        <span>@item.CorrectAnswer</span>
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("İzin ver", "IzinVer", new { id = item.ID }, new { @class = "btn btn-warning" })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("İzin verme", "IzinVerme", new { id = item.ID }, new { @class = "btn btn-danger" })
+                                    </td>
+                                    <td class="project-actions">
+                                        <a class="btn btn-primary btn-sm " href="/Admin/EklenenSorununGorunumu/@item.ID">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            İçerik
+                                        </a>
+                                        
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 10%">
+                                Course Name
+                            </th>
+                            <th style="width: 10%">
+                                Unit Name
+                            </th>
+                            <th style="width: 10%">
+                                Correct Answer
+                            </th>
+                            <th style="width: 8%">
+                                Allow Question
+                            </th>
+                            <th style="width: 12%">
+                                Don't Allow the Question
+                            </th>
+                            <th style="width: 11%">
+                                Details
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </section>
+</body>
+</html>
+
+<span style="text-align:center; position:relative;">@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p })) </span>
+
+<br />
+<br />
+<br />
+

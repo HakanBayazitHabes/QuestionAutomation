@@ -1,0 +1,73 @@
+﻿@model EntityLayer.Concrete.Question_WrongAnswer
+
+@{
+    ViewBag.Title = "SoruModulununGosterilmesi";
+    Layout = "~/Views/Shared/_ÖğrenciLayout.cshtml";
+}
+
+<br />
+<h2 class="space" style="margin:0;margin-top:0px!important;width:100%;">Sınav Modülü </h2>
+<section id="page-details">
+    @{ int i = 0;}
+    @foreach (var x in Model.Question)
+    {
+        if (x.IsTrue == false)
+        {
+            <div>
+                <div class="row space">
+                    <div class="">
+                        <h4>@{i++;}<b>@i. Soru  -</b></h4>
+                    </div>
+                    <div class=" col-10 ">
+                        <h4><b>Ders Adı:</b>  @x.CourseName  -  <b>Ünite Adı:</b> @x.UnitName </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container space">
+
+                <div>
+                    <br />
+                    @Html.Raw(x.QuestionText)
+                    <br />
+                </div>
+
+            </div>
+            if (x.IsMarkedModal == false && x.IsTrue == false)
+            {
+                @Html.ActionLink(x.CorrectAnswer, "SorununDogruIsaretlenmesi", new { id = x.ID }, new { id = "answerLink", @class = "btn btn-outline-primary  space-all" })
+
+            }
+            else
+            {
+                @Html.ActionLink(x.CorrectAnswer, "SorununDogruIsaretlenmesi", new { id = x.ID }, new { id = "answerLink", @class = "btn btn-outline-success  space-all disabled" })
+            }
+
+            foreach (var y in Model.WrongAnswer)
+            {
+                if (y.QuestionID == x.ID && x.IsMarkedModal == false && x.IsTrue == false)
+                {
+                    @Html.ActionLink(y.WrongAnswer_1, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
+                    @Html.ActionLink(y.WrongAnswer_2, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
+                    @Html.ActionLink(y.WrongAnswer_3, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
+                }
+                if (y.QuestionID == x.ID && x.IsMarkedModal == true && x.IsTrue == false)
+                {
+                    @Html.ActionLink(y.WrongAnswer_1, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-danger space-all disabled" })
+                    @Html.ActionLink(y.WrongAnswer_2, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-danger space-all disabled" })
+                    @Html.ActionLink(y.WrongAnswer_3, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-danger space-all disabled" })
+                }
+            }
+        }
+
+    }
+    <br />
+    <br /><br />
+    <br /><br />
+    <a href="/Ögrenci/SoruDetaylarınınRaporlanması/" class="btn btn-default btn-lg space"> Gönder </a>
+</section>
+<br />
+<br />
+<br />
+
+
