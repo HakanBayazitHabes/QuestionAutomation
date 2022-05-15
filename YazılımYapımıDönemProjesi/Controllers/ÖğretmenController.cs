@@ -21,8 +21,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
         Question_WrongAnswer qw = new Question_WrongAnswer();
         public ActionResult Index(int p=1)
         {
-            var degerler = questionManager.GetAll().ToPagedList(p, 10);
-            return View(degerler);
+            var sorularınSayfalanması = questionManager.GetAll().ToPagedList(p, 10);
+            return View(sorularınSayfalanması);
         }
         
         [HttpGet]
