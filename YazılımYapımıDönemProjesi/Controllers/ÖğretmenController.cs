@@ -32,9 +32,9 @@ namespace YazılımYapımıDönemProjesi.Controllers
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult SoruEkle(Question q)
+        public ActionResult SoruEkle(Question question)
         {
-            questionManager.Add(q);
+            questionManager.Add(question);
             Thread.Sleep(2100);
             return RedirectToAction("Index");
         }
@@ -45,9 +45,9 @@ namespace YazılımYapımıDönemProjesi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult YanlisCevapEkle(WrongAnswer w)
+        public ActionResult YanlisCevapEkle(WrongAnswer wrongAnswer)
         {
-            wrongAnswerManager.Add(w);
+            wrongAnswerManager.Add(wrongAnswer);
             Thread.Sleep(2100);
             return RedirectToAction("Index");
         }
@@ -63,9 +63,9 @@ namespace YazılımYapımıDönemProjesi.Controllers
             return View("SorularıGetir", soruicerigi);
         }
         [ValidateInput(false)]
-        public ActionResult EklenenSorulariGuncelle(Question q)
+        public ActionResult EklenenSorulariGuncelle(Question question)
         {
-            questionManager.Update(q);
+            questionManager.Update(question);
             Thread.Sleep(2100);
             return RedirectToAction("Index");
         }

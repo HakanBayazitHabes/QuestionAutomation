@@ -43,13 +43,13 @@ namespace YazılımYapımıDönemProjesi.Controllers
         }
         public ActionResult IzinVerilenleriGoruntule()
         {
-            var deger = questionManager.GetAll();
-            return View(deger);
+            var izinVerilenSoru= questionManager.GetAll();
+            return View(izinVerilenSoru);
         }
         public ActionResult IzinVerilmeyenleriGoruntule()
         {
-            var deger = questionManager.GetAll();
-            return View(deger);
+            var izinVerilmeyenSoru = questionManager.GetAll();
+            return View(izinVerilmeyenSoru);
         }
         public ActionResult IzinVerilenlereIzinVerme(int id)
         {
