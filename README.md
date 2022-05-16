@@ -49,8 +49,8 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 2.  [Sign Up Screen](https://i.hizliresim.com/mpy5bea.jpg)
 3.  [Forgot Password Screen](https://i.hizliresim.com/e6pdwye.jpg)
 4.  [Exam Entry Screen](https://i.hizliresim.com/7bujgg2.jpg)
-5.  [Exam Screen](https://i.hizliresim.com/bltzgso.jpg)
-6.  [Reporting Screen](https://i.hizliresim.com/jsgy2mb.jpg)
+5.  [Exam Screen](https://i.hizliresim.com/11fcs3a.jpg)
+6.  [Reporting Screen](https://i.hizliresim.com/fq6uaaq.jpg)
 
 
 
@@ -107,8 +107,8 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 2.  [Kaydol Ekranı](https://i.hizliresim.com/mpy5bea.jpg)
 3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/e6pdwye.jpg)
 4.  [Sınava Giriş Ekranı](https://i.hizliresim.com/7bujgg2.jpg)
-5.  [Sınav Ekranı](https://i.hizliresim.com/bltzgso.jpg)
-6.  [Raporlama Ekranı](https://i.hizliresim.com/jsgy2mb.jpg)
+5.  [Sınav Ekranı](https://i.hizliresim.com/11fcs3a.jpg)
+6.  [Raporlama Ekranı](https://i.hizliresim.com/fq6uaaq.jpg)
 
 
 
