@@ -17,6 +17,7 @@
             <div class="inner-box" id="card">
                 <div class="card-front">
                     <h2>Öğrenci Giriş Ekranı</h2>
+                    @*öğrencinin giriş yağtığı bölüm*@
                     @using (Html.BeginForm("OgrenciGirisYap", "Login", FormMethod.Post))
                     {
                         <form class="form-group">
@@ -31,6 +32,7 @@
                 </div>
                 <div class="card-back">
                     <h2>Öğrenci Kaydolma Ekranı</h2>
+                    @*öğrencinin kaydolduğu kısım*@
                     @using (Html.BeginForm("OgrenciKaydol", "Login", FormMethod.Post))
                     {
                         <form class="form-group">

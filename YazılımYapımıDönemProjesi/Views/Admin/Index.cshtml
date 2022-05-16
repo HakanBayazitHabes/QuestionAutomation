@@ -67,6 +67,7 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                @*adminin daha onceden izin verdiği ya da izin vermediği sorular buraya giremez*@
                                 @if (item.AdminAllow != "Allow" && item.AdminAllow != "Not Allow")
                                 {
                                     <td>
@@ -89,9 +90,11 @@
                                         <span>@item.CorrectAnswer</span>
                                     </td>
                                     <td>
+                                        @*sorulara izin verme*@
                                         @Html.ActionLink("İzin ver", "IzinVer", new { id = item.ID }, new { @class = "btn btn-warning" })
                                     </td>
                                     <td>
+                                        @*sorulara izin vermeme*@
                                         @Html.ActionLink("İzin verme", "IzinVerme", new { id = item.ID }, new { @class = "btn btn-danger" })
                                     </td>
                                     <td class="project-actions">
@@ -140,6 +143,7 @@
 </body>
 </html>
 
+@*Sayfalam işleminin gerçekleştirilmesi*@
 <span style="text-align:center; position:relative;">@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p })) </span>
 
 <br />

@@ -28,3 +28,34 @@
 .colorUp:hover {
     color: white;
 }
+
+.timer{
+    background:#cce5ff;
+    border:1px solid #b8daff;
+    border-radius:5px;
+    padding:0 8px;
+    width:230px;
+}
+    .timer .time-text{
+        font-weight:400;
+        font-size:18px;
+        user-select:none;
+    }
+    .timer .timer-time{
+        font-size:18px;
+        font-weight:500;
+        background:#343a40;
+        height:30px;
+        width:60px;
+        color:#fff;
+        line-height:30px;
+        border-radius:5px;
+        border:1px solid #343a40;
+        user-select:none;
+    }
+
+
+
+
+
+

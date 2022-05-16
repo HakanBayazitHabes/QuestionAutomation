@@ -19,12 +19,13 @@ namespace YazılımYapımıDönemProjesi.Controllers
     {
         // GET: Login
         UserManager userManager = new UserManager(new EfUserDal());
-
+        //kullanıcı ekleme
         public ActionResult Index(User p)
         {
             userManager.Add(p);
             return View();
         }
+        //öğrenci kaydı oluşturma
         [HttpGet]
         public ActionResult OgrenciKaydol()
         {
@@ -36,6 +37,7 @@ namespace YazılımYapımıDönemProjesi.Controllers
             userManager.Add(user);
             return View();
         }
+        //öğrenci girişi gerçekleştirme
         [HttpGet]
         public ActionResult OgrenciGirisYap()
         {
@@ -56,11 +58,13 @@ namespace YazılımYapımıDönemProjesi.Controllers
                 return RedirectToAction("OgrenciKaydol");
             }
         }
+        //öğrenci çıkışını gerçekleştirme
         public ActionResult OgrenciLogOut()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("OgrenciKaydol");
         }
+        //öğrenci şifresini sıfırlama
         [HttpGet]
         public ActionResult ResetOgrenciPassword()
         {
@@ -92,6 +96,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
             }
             return View();
         }
+
+        //Öğretemne Kaydol
         [HttpGet]
         public ActionResult OgretmenKaydol()
         {
@@ -103,6 +109,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
             userManager.Add(user);
             return View();
         }
+
+        //Öğretmen giriş yap
         [HttpGet]
         public ActionResult OgretmenGirisYap()
         {
@@ -123,11 +131,15 @@ namespace YazılımYapımıDönemProjesi.Controllers
                 return RedirectToAction("OgretmenKaydol");
             }
         }
+
+        //Öğretmen çıkış yap
         public ActionResult OgretmenLogOut()
         {
             FormsAuthentication.SignOut();
             return View("OgretmenKaydol");
         }
+
+        //Öğretmen şifre sıfırlama
         [HttpGet]
         public ActionResult ResetOgretmenPassword()
         {
@@ -159,6 +171,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
             }
             return View();
         }
+
+        //Admin giriş Yap
         [HttpGet]
         public ActionResult AdminGirisYap()
         {
@@ -179,6 +193,8 @@ namespace YazılımYapımıDönemProjesi.Controllers
                 return View();
             }
         }
+
+        //Admin çıkış yap
         public ActionResult AdminLogOut()
         {
             FormsAuthentication.SignOut();

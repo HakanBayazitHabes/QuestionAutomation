@@ -17,17 +17,21 @@ namespace YazılımYapımıDönemProjesi.Controllers
         Question_WrongAnswer question_WrongAnswer = new Question_WrongAnswer();
         WrongAnswerManager wrongAnswerManager = new WrongAnswerManager(new EfWrongAnswerDal());
 
-       
+       //Öğrencinin ana başlama noktası sınava giriş ekranı
         public ActionResult Index()
         {
             return View();
         }
+
+        //öğretmenin eklediği soruları öğrenciye gösterildiği bölüm
         public ActionResult EklenenSorularınGosterimi()
         {
             question_WrongAnswer.Question= questionManager.GetAll().FindAll(x=>x.AdminAllow=="Allow").Take(10);
             question_WrongAnswer.WrongAnswer = wrongAnswerManager.GetAll();
             return View(question_WrongAnswer);
         }
+
+        //Öğrencinin karşısına çıkan soruları işaretlemesidir
         public ActionResult SorununDogruIsaretlenmesi(int id)
         {
             questionManager.GetByIdTrue(id);
@@ -38,12 +42,16 @@ namespace YazılımYapımıDönemProjesi.Controllers
             questionManager.GetByIdFalse(id);
             return RedirectToAction("EklenenSorularınGosterimi");
         }
+
+        //Bu kısım öğrencinin sadece yanlış yaptığı kısımları gösterir
         public ActionResult SoruModulununGosterilmesi()
         {
             question_WrongAnswer.Question = questionManager.GetAll().FindAll(x => x.AdminAllow == "Allow").Take(20);
             question_WrongAnswer.WrongAnswer = wrongAnswerManager.GetAll();
             return View(question_WrongAnswer);
         }
+
+        //Öğrencinin yaptığı soruları başarı oranına göre raporlar
         public ActionResult SoruDetaylarınınRaporlanması()
         {
             var tumSorular = questionManager.GetAll();

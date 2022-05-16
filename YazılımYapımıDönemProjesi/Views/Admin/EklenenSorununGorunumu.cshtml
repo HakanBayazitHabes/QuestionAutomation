@@ -16,6 +16,7 @@
 
         <div class="container space">
 
+            @*soru gövdelerinin yazdırılması*@
             <div>
                 <br />
                 @Html.Raw(x.QuestionText)
@@ -27,6 +28,7 @@
             @x.CorrectAnswer
         </div>
 
+        //yanlış cevapların yazdırılması
         foreach (var y in Model.WrongAnswer)
         {
             if (y.QuestionID == x.ID)

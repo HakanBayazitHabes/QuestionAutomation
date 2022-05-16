@@ -5,7 +5,20 @@
 }
 
 <br />
-<h2 class="space" style="margin:0;margin-top:0px!important;width:100%;">Sınavınız Başlamıştır! Başarılar Dileriz</h2>
+
+<div class="row space">
+    <h2 class="col-8" style="margin:0;margin-top:0px!important;width:100%;">Sınavınız Başlamıştır! Başarılar Dileriz</h2>
+    <div class="timer" style="position: fixed; margin-left:58%;">
+        <div class="row" style="margin-top:4px;">
+            <div class="time-text col-7">Sınav Süresi:</div>
+            <div class="timer-time col-5 mb-1">
+                <p id="countdown">10: 00</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <section id="page-details">
     @{ int i = 0;}
     @foreach (var x in Model.Question)
@@ -28,30 +41,38 @@
 
             <div>
                 <br />
+                @*Soruların kendisini Ana gövdelerini Getitrir*@
                 @Html.Raw(x.QuestionText)
                 <br />
             </div>
 
         </div>
+        //işaretlenmemeiş soruların gösterilmesi
         if (x.IsMark == false)
         {
+            //soruların işaretlenemsi
             @Html.ActionLink(x.CorrectAnswer, "SorununDogruIsaretlenmesi", new { id = x.ID }, new { id = "answerLink", @class = "btn btn-outline-primary  space-all" })
 
         }
         else
         {
+            //işaretleme yapılan sorular
             @Html.ActionLink(x.CorrectAnswer, "SorununDogruIsaretlenmesi", new { id = x.ID }, new { id = "answerLink", @class = "btn btn-outline-success  space-all disabled" })
 
         }
 
         foreach (var y in Model.WrongAnswer)
         {
+
+            //işaretlenmemiş soruları karşısına çıkarır
             if (y.QuestionID == x.ID && x.IsMark == false)
             {
                 @Html.ActionLink(y.WrongAnswer_1, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
                 @Html.ActionLink(y.WrongAnswer_2, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
                 @Html.ActionLink(y.WrongAnswer_3, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-primary space-all" })
             }
+
+            //işaretlenmiş srouları karşılarına çıkarır
             if (y.QuestionID == x.ID && x.IsMark == true)
             {
                 @Html.ActionLink(y.WrongAnswer_1, "SorununYanlisIsaretlenmesi", new { id = y.QuestionID }, new { id = "answerLink", @class = "btn btn-outline-danger space-all disabled" })
@@ -64,9 +85,11 @@
     <br />
     <br /><br />
     <br /><br />
+    @*Öğrencinin yaptığı soruları raporlar*@
     <a href="/Ögrenci/SoruDetaylarınınRaporlanması/" class="btn btn-default btn-lg space"> Gönder </a>
 </section>
 
+<script src="~/js/timerscript.js"></script>
 
 
 

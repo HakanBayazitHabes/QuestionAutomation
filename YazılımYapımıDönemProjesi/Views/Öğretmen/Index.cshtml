@@ -137,6 +137,8 @@
 </html>
 
 <a href="/Öğretmen/SoruEkle/" class="btn btn-primary">Yeni Soru Ekle</a>
+
+@*sayfalama işleminin gerçekleştirilmesi*@
 <span style="text-align:center; position:relative;">@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p })) </span>
 
 

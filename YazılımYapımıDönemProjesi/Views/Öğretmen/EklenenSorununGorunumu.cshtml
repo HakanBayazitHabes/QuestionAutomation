@@ -16,6 +16,7 @@
 
         <div class="container space">
 
+            @*soru gövdesinin gösterilmesi*@
             <div>
                 <br />
                 @Html.Raw(x.QuestionText)
@@ -27,6 +28,7 @@
             @x.CorrectAnswer
         </div>
 
+        //yanlış şıkların gösterilmesi
         foreach (var y in Model.WrongAnswer)
         {
             if (y.QuestionID == x.ID)
