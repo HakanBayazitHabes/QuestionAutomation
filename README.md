@@ -1,7 +1,8 @@
 # QuestionAutomation
 ## ENGLISH
 ### İnformation
-Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğretmenlerimiz ve özellikle de öğrencilerimzin kolayca etkileşim kurduğu ve  admin kontrolünün olduğu bir soru sistemi üzerine kuruludur . Projemiz ***teknik*** açıdan bakacak olursan katmanlı mimari kullanarak kullanıcı dostu yapı oluşturmaya gayret gösterdik ve soyut sınıflara olabildiğince önem verdik ki ileride yapacağımız güncellemerin maliyet açısından minimalize etmeye çalıştık . 
+In this project, we prepared a question automation. This project we are preparing is based on a question system with which our teachers and especially our students interact easily and have admin control. If you look at our project from a ***technical*** point of view, we tried to create a user-friendly structure using a layered architecture with the Dependency Injection design pattern, and gave importance to abstract classes as much as possible so that we tried to minimize the cost of future updates.
+
 
 #### **Aim:**
 > The main purpose is to enable students to test themselves in a fast, plain and understandable way. It aims to host the adding-removing questions to the system in the teacher panel, the features such as adding-removing questions, updating questions, and features that can be added later in the admin panel.
@@ -28,7 +29,7 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 ### Admin Panel
  
 1.  [Login Screen](https://i.hizliresim.com/91tpqh9.jpg)
-2.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
+2.  [Main Menu](https://i.hizliresim.com/4zxjte9.jpg)
 3.  [Not Allowed Questions](https://i.hizliresim.com/9rkw7hn.jpg)
 4.  [Details of Allowed Questions](https://i.hizliresim.com/sft4cnh.jpg)
 
@@ -59,7 +60,7 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
 
 ## TURKCE
 ### Bilgilendirme
-Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğretmenlerimiz ve özellikle de öğrencilerimzin kolayca etkileşim kurduğu ve  admin kontrolünün olduğu bir soru sistemi üzerine kuruludur . Projemiz ***teknik*** açıdan bakacak olursan katmanlı mimari kullanarak kullanıcı dostu yapı oluşturmaya gayret gösterdik ve soyut sınıflara olabildiğince önem verdik ki ileride yapacağımız güncellemerin maliyet açısından minimalize etmeye çalıştık . 
+Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğretmenlerimiz ve özellikle de öğrencilerimzin kolayca etkileşim kurduğu ve  admin kontrolünün olduğu bir soru sistemi üzerine kuruludur . Projemiz ***teknik*** açıdan bakacak olursan Dependency Injection design pattern ile katmanlı mimari kullanarak kullanıcı dostu yapı oluşturmaya gayret gösterdik ve soyut sınıflara olabildiğince önem verdik ki ileride yapacağımız güncellemerin maliyet açısından minimalize etmeye çalıştık . 
 
 #### **Amaç:** 
 > Esas amaç öğrencilerin hızlı, sade anlaşılır bir şekilde kendini sınamasını sağlamaktır. Sisteme soru ekleme-çıkarma kısmını öğretmen panelinde, soru ekleme-çıkarma soru güncelleme gibi özellikleri ve daha sonra eklenebilecek özellikleri admin panelinde barındırmayı hedefler.
