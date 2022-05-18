@@ -30,7 +30,7 @@ In this project, we prepared a question automation. This project we are preparin
  
 1.  [Login Screen](https://i.hizliresim.com/91tpqh9.jpg)
 2.  [Main Menu](https://i.hizliresim.com/fget0sn.jpg)
-3.  [Not Allowed Questions](https://i.hizliresim.com/9rkw7hn.jpg)
+3.  [Not Allowed Questions](https://i.hizliresim.com/mi4p5g9.jpg)
 4.  [Details of Allowed Questions](https://i.hizliresim.com/pk7wb2f.jpg)
 
 ### Teacher Panel
