@@ -29,20 +29,20 @@ In this project, we prepared a question automation. This project we are preparin
 ### Admin Panel
  
 1.  [Login Screen](https://i.hizliresim.com/91tpqh9.jpg)
-2.  [Main Menu](https://i.hizliresim.com/4zxjte9.jpg)
+2.  [Main Menu](https://i.hizliresim.com/fget0sn.jpg)
 3.  [Not Allowed Questions](https://i.hizliresim.com/9rkw7hn.jpg)
-4.  [Details of Allowed Questions](https://i.hizliresim.com/sft4cnh.jpg)
+4.  [Details of Allowed Questions](https://i.hizliresim.com/pk7wb2f.jpg)
 
 ### Teacher Panel
 
 1.  [Login Screen](https://i.hizliresim.com/hths53w.jpg)
 2.  [Sign Up Screen](https://i.hizliresim.com/jpu0w1m.jpg)
 3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
-4.  [Main Menu](https://i.hizliresim.com/cdd4ijh.jpg)
+4.  [Main Menu](https://i.hizliresim.com/9k9798m.jpg)
 5.  [Add Question Screen](https://i.hizliresim.com/rfqtyvh.jpg)
 6.  [Appearance of Added Question](https://i.hizliresim.com/a4ey3im.jpg)
 7.  [Adding Wrong Answer Screen](https://i.hizliresim.com/rkk80hd.jpg)
-8.  [Update Questions Screen](https://i.hizliresim.com/4v0jwl5.jpg)
+8.  [Update Questions Screen](https://i.hizliresim.com/i5fds66.jpg)
 
 ### Student Panel
 
@@ -87,20 +87,20 @@ Bu projemizde bir soru otomasyonu hazırladık .Hazırladağımız bu proje öğ
  ### Admin Paneli
  
 1.  [Giriş Ekranı](https://i.hizliresim.com/91tpqh9.jpg)
-2.  [Ana Menu](https://i.hizliresim.com/4zxjte9.jpg)
-3.  [İzin Verilmeyen Sorular](https://i.hizliresim.com/9rkw7hn.jpg)
-4.  [İzin Verilen Soruların Detayları](https://i.hizliresim.com/sft4cnh.jpg)
+2.  [Ana Menu](https://i.hizliresim.com/fget0sn.jpg)
+3.  [İzin Verilmeyen Sorular](https://i.hizliresim.com/mi4p5g9.jpg)
+4.  [İzin Verilen Soruların Detayları](https://i.hizliresim.com/pk7wb2f.jpg)
 
 ### Öğretmen Paneli
 
 1.  [Giriş Ekranı](https://i.hizliresim.com/hths53w.jpg)
 2.  [Kaydol Ekranı](https://i.hizliresim.com/jpu0w1m.jpg)
 3.  [Şifremi Unuttum Ekranı](https://i.hizliresim.com/ki4qlkf.jpg)
-4.  [Ana Menu](https://i.hizliresim.com/cdd4ijh.jpg)
+4.  [Ana Menu](https://i.hizliresim.com/9k9798m.jpg)
 5.  [Soru Ekleme Ekranı](https://i.hizliresim.com/rfqtyvh.jpg)
 6.  [Eklenen Sorunun Görünümü](https://i.hizliresim.com/a4ey3im.jpg)
 7.  [Yanlış Cevap Ekleme Ekranı](https://i.hizliresim.com/rkk80hd.jpg)
-8.  [Soruları Güncelleme Ekranı](https://i.hizliresim.com/4v0jwl5.jpg)
+8.  [Soruları Güncelleme Ekranı](https://i.hizliresim.com/i5fds66.jpg)
 
 ### Öğrenci Paneli
 
