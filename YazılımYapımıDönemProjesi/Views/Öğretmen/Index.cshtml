@@ -81,10 +81,10 @@
                                     <span>@item.UnitName</span>
                                 </td>
                                 <td>
-                                    <smal>@item.QuestionText.Substring(0, item.QuestionText.Length - (item.QuestionText.Length / 2 + item.QuestionText.Length / 3))...</smal>
+                                    <smal>@item.QuestionText.Substring(0, item.QuestionText.Length - (item.QuestionText.Length / 3 + item.QuestionText.Length / 3 + item.QuestionText.Length / 4))...</smal>
                                 </td>
                                 <td>
-                                    <span>@item.CorrectAnswer</span>
+                                    <span>@item.CorrectAnswer.Substring(0, item.CorrectAnswer.Length - (item.CorrectAnswer.Length / 3 + item.CorrectAnswer.Length / 6))...</span>
                                 </td>
                                 <td class="project-actions">
                                     <a class="btn btn-primary btn-sm mt-1" href="/Öğretmen/EklenenSorununGorunumu/@item.ID">

@@ -19,7 +19,7 @@ namespace BusinessLayer.Concreate
         {
             _wrongAnswerDal = wrongAnswerDal;
         }
-
+        //yanlış cevap eklediği kısım
         public void Add(WrongAnswer wrongAnswer)
         {
             WrongAnswerValidator wrongAnswerValidator = new WrongAnswerValidator();
@@ -33,7 +33,7 @@ namespace BusinessLayer.Concreate
                 throw new ValidationException(result.Errors);
             }
         }
-
+        //yanlışcevapların silindiği kısım
         public void Delete(WrongAnswer wrongAnswer)
         {
             try
@@ -46,12 +46,12 @@ namespace BusinessLayer.Concreate
                 throw new Exception("Silme Gerçekleştirilemedi!");
             }
         }
-
+        //Bütün soruşarın WrongAnswer tiinde listeye atanması
         public List<WrongAnswer> GetAll()
         {
             return _wrongAnswerDal.GetAll();
         }
-
+        //yanlış cevapalrın güncelleştirilemsi
         public void Update(WrongAnswer wrongAnswer)
         {
             _wrongAnswerDal.Update(wrongAnswer);

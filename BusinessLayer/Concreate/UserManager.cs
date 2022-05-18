@@ -19,7 +19,7 @@ namespace BusinessLayer.Concreate
         {
             _userDal = userDal;
         }
-
+        //User ekleme işlemi yapılır
         public void Add(User user)
         {
             UserValidator usertValidator = new UserValidator();
@@ -33,7 +33,7 @@ namespace BusinessLayer.Concreate
                 throw new ValidationException(result.Errors);
             }
         }
-
+        //Usser Silinir
         public void Delete(User user)
         {
             try
@@ -46,22 +46,23 @@ namespace BusinessLayer.Concreate
                 throw new Exception("Silme Gerçekleştirilemedi!");
             }
         }
-
+        //Mail ve password'a göre kullanıcı getirilir
         public User GetByMailPassword(User user)
         {
             return _userDal.Get(x => x.Mail == user.Mail && x.Password== user.Password);
         }
 
+        //Bütün kullanıcıları getirir.
         public List<User> GetAll()
         {
             return _userDal.GetAll();
         }
-
+        //Kullanıcıları güncelleştirir
         public void Update(User user)
         {
             _userDal.Update(user);
         }
-
+        //mail3 göre kullanıcı getirir
         public User GetByEmail(User user)
         {
             return _userDal.Get(x => x.Mail == user.Mail);

@@ -19,7 +19,7 @@ namespace BusinessLayer.Concreate
         {
             _questionDal = questionDal;
         }
-
+        //Soru ekleme işlemi burada gerçekleşir
         public void Add(Question question)
         {
             QuestionValidator questionValidator = new QuestionValidator();
@@ -34,7 +34,7 @@ namespace BusinessLayer.Concreate
                 throw new ValidationException(result.Errors);
             }
         }
-
+        //id ye göre false degeri atanır
         public void GetByIdFalse(int id)
         {
             var yanlisYapilanSoru = _questionDal.Get(x => x.ID == id);
@@ -43,7 +43,7 @@ namespace BusinessLayer.Concreate
             yanlisYapilanSoru.IsMarkedModal = true;
             _questionDal.Update(yanlisYapilanSoru);
         }
-
+        //Id'ye göre True degeri atanır
         public void GetByIdTrue(int id)
         {
             var dogruYapılanSoru = _questionDal.Get(x => x.ID == id);
@@ -52,21 +52,21 @@ namespace BusinessLayer.Concreate
             dogruYapılanSoru.IsMarkedModal = true;
             _questionDal.Update(dogruYapılanSoru);
         }
-
+        //Id'ye göre sorular active edilir
         public void GetByactiveID(int id)
         {
             var izinVerilenSoru=_questionDal.Get(x => x.ID == id);
             izinVerilenSoru.AdminAllow = "Allow";
             _questionDal.Update(izinVerilenSoru);
         }
-
+        //Id'ye göre sorular pasif edilebilir
         public void GetByPassiveID(int id)
         {
             var izinVerilmeyenSoru = _questionDal.Get(x => x.ID==id);
             izinVerilmeyenSoru.AdminAllow = "Not Allow";
             _questionDal.Update(izinVerilmeyenSoru);
         }
-
+        //Sorular silinir
         public void Delete(Question question)
         {
             try
@@ -79,22 +79,22 @@ namespace BusinessLayer.Concreate
                 throw new Exception("Silme Gerçekleştirilemedi!");
             }
         }
-
+        //Bütün sorular question tipinde listeye eklenir
         public List<Question> GetAll()
         {
             return _questionDal.GetAll();
         }
-
+        //sorular güncellenir
         public void Update(Question question)
         {
             _questionDal.Update(question);
         }
-
+        //Son id'li soruyu getirir
         public IEnumerable<Question> GetByLastID(int id)
         {
             yield return _questionDal.Get(x => x.ID == id);
         }
-
+        //sorunun id'sine göre soruyu getirir
         public Question GetByQuestionID(int id)
         {
             return _questionDal.Get(x => x.ID == id);

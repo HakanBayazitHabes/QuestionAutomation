@@ -18,12 +18,13 @@ namespace EntityLayer.Concrete
         public string CourseName { get; set; }
         [StringLength(30)]
         public string UnitName { get; set; }
+        [StringLength(30)]
         public string SubjectName { get; set; }
-        [StringLength(3000)]
+        [StringLength(4000)]
         [AllowHtml]
         public string QuestionText { get; set; }
         public DateTime AddDate { get; set; }
-        [StringLength(40)]
+        [StringLength(250)]
         public string CorrectAnswer { get; set; }
         public string AdminAllow { get; set; }
         public bool IsTrue { get; set; }

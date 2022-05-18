@@ -12,13 +12,13 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int WrongAnswerID { get; set; }
-        [StringLength(25)]
+        [StringLength(111)]
         [Required(ErrorMessage = "Name is WrongAnswer 1.")]
         public string WrongAnswer_1 { get; set; }
-        [StringLength(25)]
+        [StringLength(111)]
         [Required(ErrorMessage = "Name is WrongAnswer 2.")]
         public string WrongAnswer_2 { get; set; }
-        [StringLength(25)]
+        [StringLength(111)]
         [Required(ErrorMessage = "Name is WrongAnswer 3.")]
         public string WrongAnswer_3 { get; set; }
 

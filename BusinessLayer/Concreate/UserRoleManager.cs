@@ -20,7 +20,7 @@ namespace BusinessLayer.Concreate
         {
             _userRoleDal = userRoleDal;
         }
-
+        //userrole eklenir
         public void Add(UserRole userRole)
         {
             UserRoleValidator userRoleValidator = new UserRoleValidator();
@@ -34,7 +34,7 @@ namespace BusinessLayer.Concreate
                 throw new ValidationException(result.Errors);
             }
         }
-
+        //userrole silinir
         public void Delete(UserRole userRole)
         {
             try
@@ -47,12 +47,12 @@ namespace BusinessLayer.Concreate
                 throw new Exception("Silme Gerçekleştirilemedi!");
             }
         }
-
+        // Bütün userrole UserRole tipinde  listeye alınır
         public List<UserRole> GetAll()
         {
             return _userRoleDal.GetAll();
         }
-
+        //userrole ler update edilir
         public void Update(UserRole userRole)
         {
             _userRoleDal.Update(userRole);
